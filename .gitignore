@@ -33,7 +33,7 @@ vignettes/*.pdf
 *.knit.md
 
 # Original Images Cache
-*.Setup_and_Access/images_org/
+*.Setup_and_Access/images_org/*
 
 # Mac Files
 *.DS
