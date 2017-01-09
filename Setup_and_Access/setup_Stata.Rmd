@@ -1,0 +1,45 @@
+---
+title: "Setup and Access Stata"
+output:
+  html_document:
+    toc: true
+    toc_float: true
+    toc_depth: 2
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(cache=TRUE)
+```
+
+# Stata
+
+[Stata](http://www.stata.com) is a statistical programming software developed in the 1980's by StataCorp. It is widely used by social scientists including sociologists, economists, and political scientists. There are a wide variety of add-on packages as well as extensive textbooks, websites, and in-program documentation to assist users. The program is not open-source, and users must either purchase liscence or access the program through an instiutional liscence, such as one through a university. 
+
+
+# Accesssing Stata
+
+
+## Purchasing Stata
+
+The most convenient way to use Stata is having it locally on your computer. If you would like to work this way, I recommend purchasing a version with the educational discount for students at the University of Chicago. This is accomplished directly through the [Stata for educational pricing website](http://www.stata.com/order/new/edu/gradplans/student-pricing/). Once purchased, the program is easily downloaded and installed using the download link and liscence key they provide by email. Since the program can be expensive for some students, it can be accessed remotely for free using the university liscence (with some loss of convenience). Alternatively, [R](https://www.r-project.org/) is an open-source statistical programming language that is free to download and install. 
+
+*Please note that there are different versions of Stata available. Although "Small Stata" is the least expensive, it is not recommended due to its limited number of observations. When dealing with the GSS and other national surveys, you will encounter datasets beyond Small Stata's capabilities. By contrast, both Stata/IC and Stata/SE can handle an unlimited number of observations and would be recommended. One caveat with Stata/IC is the maximum number of variables (2,047 variables). If you are working with a large dataset, such as the cumulative General Social Survey, you will not be able to simply open the dataset which has over 5,000 variables. Instead, you will need to specify which variables you would like to use when opening the data. While this is not a hindrance for the course, if you plan to work with statistical analysis in the long run, you may want to consider Stata/SE, which is most convenient. Both Stata/IC and Stata/SE are available for an annual or perpetual license. Stata/IC has the advantage of a less expensive six month license if you simply want Stata for this course.* 
+
+## Remotely Accessing Stata with a University Liscence
+
+Apart from purchasing the liscence, Stata can be accessed using the university's remote desktop connection or virtual lab. The advantage to this method is that it is free. However, you will be more likely to encounter a lag when using the software, and the program has been known to crash more readily. Remote access can also complicate the workflow in accessing data, .do files, logs, and raises potential security issues if you are working with sensitive data. Below, I provide links about remote access, specific to University of Chicago students.
+
+
+* Access to STATA will be through the [UChicago VLab or on campus labs](http://academictech.uchicago.edu/vlab)
+* Access online student software lab, [Guide](https://answers.uchicago.edu/page.php?id=33269)
+* If (and only if) you are using your personal computer off-campus (that is, not connected to the internet through the campus network), see also  directions for [Mac users](https://answers.uchicago.edu/page.php?id=68918) or [Windows users](https://answers.uchicago.edu/page.php?id=27208) for information on how to set up VPN. When off-campus, you will need to first log into VPN and then access Remote Desktop.
+
+Using VLab
+When using VLab, make sure that you are saving your datasets and do-files on your student folders on the computer itself, rather than the remote desktop. VLab is not meant to allow you to store large files, and if you attempt to do so your files may be deleted. Saving the files in your student folder (H: drive) will permit you to access them anytime you log on to the university network. If you would instead like to save these files directly to a different computer (e.g., your personal laptop) rather than storing them on the network, follow the instructions below. (Note: Files can always be transferred from network to a personal computer at any time by accessing  UChicagoBox through the internet.)
+
+
+---
+
+### Acknowledgments {.toc-ignore}
+
+* This page has been borrowed from ["MACS 30500 - Computing for the Social Sciences"](http://cfss.uchicago.edu) a course taught by Dr. Benjamin Soltoff with assistance from Joshua Gary Mausolf at the University of Chicago. This page is derived in part from ["UBC STAT 545A and 547M"](http://stat545.com), licensed under the [CC BY-NC 3.0 Creative Commons License](https://creativecommons.org/licenses/by-nc/3.0/). 
