@@ -1259,6 +1259,391 @@ F Statistic
 </td>
 </tr>
 </table>
+<p><strong>Note: we can improve the stargazer table with the following changes:</strong></p>
+<ul>
+<li>Adjust p-values</li>
+<li>Custom labels</li>
+<li>Change to 2-digits</li>
+<li><a href="http://jakeruss.com/cheatsheets/stargazer.html">Stargazer Cheat Sheet</a></li>
+</ul>
+<pre class="r"><code>cv_labels &lt;- c(&quot;Male&quot;, &quot;Age&quot;, 
+               &quot;Asian&quot;,  &quot;Caucasian&quot;,
+               &quot;Hispanic&quot;, &quot;Unknown&quot;)
+
+stargazer(lm_1, lm_2, lm_3, header=FALSE, 
+          type = 'html', 
+          font.size = &quot;footnotesize&quot;, 
+          digits = 2,
+          title = &quot;Linear Models of Executive Compensation&quot;,
+          covariate.labels = cv_labels,
+          star.cutoffs = c(0.05, 0.01, 0.001))</code></pre>
+<table style="text-align:center">
+<caption>
+<strong>Linear Models of Executive Compensation</strong>
+</caption>
+<tr>
+<td colspan="4" style="border-bottom: 1px solid black">
+</td>
+</tr>
+<tr>
+<td style="text-align:left">
+</td>
+<td colspan="3">
+<em>Dependent variable:</em>
+</td>
+</tr>
+<tr>
+<td>
+</td>
+<td colspan="3" style="border-bottom: 1px solid black">
+</td>
+</tr>
+<tr>
+<td style="text-align:left">
+</td>
+<td colspan="3">
+salary
+</td>
+</tr>
+<tr>
+<td style="text-align:left">
+</td>
+<td>
+(1)
+</td>
+<td>
+(2)
+</td>
+<td>
+(3)
+</td>
+</tr>
+<tr>
+<td colspan="4" style="border-bottom: 1px solid black">
+</td>
+</tr>
+<tr>
+<td style="text-align:left">
+Male
+</td>
+<td>
+135.00<sup>*</sup>
+</td>
+<td>
+</td>
+<td>
+</td>
+</tr>
+<tr>
+<td style="text-align:left">
+</td>
+<td>
+(58.00)
+</td>
+<td>
+</td>
+<td>
+</td>
+</tr>
+<tr>
+<td style="text-align:left">
+</td>
+<td>
+</td>
+<td>
+</td>
+<td>
+</td>
+</tr>
+<tr>
+<td style="text-align:left">
+Age
+</td>
+<td>
+</td>
+<td>
+3.90<sup>*</sup>
+</td>
+<td>
+</td>
+</tr>
+<tr>
+<td style="text-align:left">
+</td>
+<td>
+</td>
+<td>
+(1.90)
+</td>
+<td>
+</td>
+</tr>
+<tr>
+<td style="text-align:left">
+</td>
+<td>
+</td>
+<td>
+</td>
+<td>
+</td>
+</tr>
+<tr>
+<td style="text-align:left">
+Asian
+</td>
+<td>
+</td>
+<td>
+</td>
+<td>
+-133.00
+</td>
+</tr>
+<tr>
+<td style="text-align:left">
+</td>
+<td>
+</td>
+<td>
+</td>
+<td>
+(151.00)
+</td>
+</tr>
+<tr>
+<td style="text-align:left">
+</td>
+<td>
+</td>
+<td>
+</td>
+<td>
+</td>
+</tr>
+<tr>
+<td style="text-align:left">
+Caucasian
+</td>
+<td>
+</td>
+<td>
+</td>
+<td>
+-73.00
+</td>
+</tr>
+<tr>
+<td style="text-align:left">
+</td>
+<td>
+</td>
+<td>
+</td>
+<td>
+(116.00)
+</td>
+</tr>
+<tr>
+<td style="text-align:left">
+</td>
+<td>
+</td>
+<td>
+</td>
+<td>
+</td>
+</tr>
+<tr>
+<td style="text-align:left">
+Hispanic
+</td>
+<td>
+</td>
+<td>
+</td>
+<td>
+-371.00
+</td>
+</tr>
+<tr>
+<td style="text-align:left">
+</td>
+<td>
+</td>
+<td>
+</td>
+<td>
+(444.00)
+</td>
+</tr>
+<tr>
+<td style="text-align:left">
+</td>
+<td>
+</td>
+<td>
+</td>
+<td>
+</td>
+</tr>
+<tr>
+<td style="text-align:left">
+Unknown
+</td>
+<td>
+</td>
+<td>
+</td>
+<td>
+-282.00<sup>*</sup>
+</td>
+</tr>
+<tr>
+<td style="text-align:left">
+</td>
+<td>
+</td>
+<td>
+</td>
+<td>
+(117.00)
+</td>
+</tr>
+<tr>
+<td style="text-align:left">
+</td>
+<td>
+</td>
+<td>
+</td>
+<td>
+</td>
+</tr>
+<tr>
+<td style="text-align:left">
+Constant
+</td>
+<td>
+621.00<sup>***</sup>
+</td>
+<td>
+528.00<sup>***</sup>
+</td>
+<td>
+896.00<sup>***</sup>
+</td>
+</tr>
+<tr>
+<td style="text-align:left">
+</td>
+<td>
+(57.00)
+</td>
+<td>
+(108.00)
+</td>
+<td>
+(115.00)
+</td>
+</tr>
+<tr>
+<td style="text-align:left">
+</td>
+<td>
+</td>
+<td>
+</td>
+<td>
+</td>
+</tr>
+<tr>
+<td colspan="4" style="border-bottom: 1px solid black">
+</td>
+</tr>
+<tr>
+<td style="text-align:left">
+Observations
+</td>
+<td>
+1,000
+</td>
+<td>
+1,000
+</td>
+<td>
+1,000
+</td>
+</tr>
+<tr>
+<td style="text-align:left">
+R<sup>2</sup>
+</td>
+<td>
+0.01
+</td>
+<td>
+0.004
+</td>
+<td>
+0.05
+</td>
+</tr>
+<tr>
+<td style="text-align:left">
+Adjusted R<sup>2</sup>
+</td>
+<td>
+0.004
+</td>
+<td>
+0.003
+</td>
+<td>
+0.05
+</td>
+</tr>
+<tr>
+<td style="text-align:left">
+Residual Std. Error
+</td>
+<td>
+439.00 (df = 998)
+</td>
+<td>
+439.00 (df = 998)
+</td>
+<td>
+429.00 (df = 995)
+</td>
+</tr>
+<tr>
+<td style="text-align:left">
+F Statistic
+</td>
+<td>
+5.40<sup>*</sup> (df = 1; 998)
+</td>
+<td>
+4.30<sup>*</sup> (df = 1; 998)
+</td>
+<td>
+14.00<sup>***</sup> (df = 4; 995)
+</td>
+</tr>
+<tr>
+<td colspan="4" style="border-bottom: 1px solid black">
+</td>
+</tr>
+<tr>
+<td style="text-align:left">
+<em>Note:</em>
+</td>
+<td colspan="3" style="text-align:right">
+<sup><em></sup>p&lt;0.05; <sup><strong></sup>p&lt;0.01; <sup></strong></em></sup>p&lt;0.001
+</td>
+</tr>
+</table>
 <hr />
 </div>
 <div id="excercises" class="section level1">
